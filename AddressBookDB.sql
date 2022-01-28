@@ -62,3 +62,16 @@ SELECT FirstName,phonenum FROM  AddressBookTable WHERE address='Dombivali Mumbai
 -- if employees belongs to same state and city than we can get that numbers of employee in our size column .
  SELECT COUNT(stateCode) AS Size,country,stateCode FROM AddressBookTable GROUP BY stateCode,country;
 
+ -----------------Uc8------------------------------------
+ ----- Sort contacts Alphabatically-----------------------
+
+ select * from AddressBookTable order by firstname desc;
+
+ --The ORDER BY statement in SQL is used to sort the fetched data in either ascending or descending
+ -- according to one or more columns. 
+
+--By default ORDER BY sorts the data in ascending order.
+--We can use the keyword DESC to sort the data in descending order and the keyword ASC to sort in ascending order.
+
+ select * from AddressBookTable order by Lastname asc;
+
