@@ -95,6 +95,15 @@ SELECT FirstName,phonenum FROM  AddressBookTable WHERE address='Dombivali Mumbai
  set Type_Name='family'
  where firstname='Prajwal';
 
+ -------------Uc10-----------------------
+ --Ability to count based on type-----------
+
+
+
 
  select * from AddressBookTable;
+
+  SELECT count(TYPE_NAME)  from AddressBookTable where TYPE_NAME = 'friend';
+
+    SELECT count(TYPE_NAME)  from AddressBookTable where TYPE_NAME = 'family';
 
