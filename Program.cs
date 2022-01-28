@@ -26,6 +26,8 @@ namespace AddressBookDB
 
             repo.Adddata(emp);
 
+            repo.Verifyuccases(emp);
+
             
         }
     }
