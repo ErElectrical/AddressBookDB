@@ -28,3 +28,10 @@ INSERT  AddressBookTable VALUES('Mohit ','Tanwar','Kotul Akole',422610,'Maharash
 ('Neha','Shelke','Warora Nagpur',3333333,'Chandigad','india',8232322323,'neha@gmail.com'),
 ('Srujan','Mahajan','Dombivali Mumbai',444444,'Maharashtra','japan',9112121212,'srujan@gmail.com'),
 ('Prajwal','Zurunge','Chandannagar Vimannagar',555555,'gujrat','india',9876543322,'prajwal@gmail.com');
+
+--------------Uc4-----------------------
+---ability to edit contact--------------
+
+UPDATE AddressBookTable SET Phonenum=97456638984 WHERE FirstName='Mohit';
+UPDATE AddressBookTable SET Lastname='Kumar' WHERE FirstName='Srujan';
+UPDATE AddressBookTable SET EmailId='kumar12@gmail.com' WHERE LastName='Zurunge';
