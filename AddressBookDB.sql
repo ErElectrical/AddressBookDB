@@ -22,6 +22,9 @@ create table AddressBookTable
 
 select * from AddressBookTable;
 
+
+
+
 --uc3 ability to insert data into table
 
 INSERT  AddressBookTable VALUES('Mohit ','Tanwar','Kotul Akole',422610,'Maharashtra','india',8792810271,'Mohit@gmail.com'),
@@ -41,3 +44,9 @@ UPDATE AddressBookTable SET EmailId='kumar12@gmail.com' WHERE LastName='Zurunge'
 
 
 DELETE FROM AddressBookTable WHERE FirstName='Neha';
+
+---------------UC6---------------
+-----Retrieve person's City------
+
+
+SELECT FirstName,phonenum FROM  AddressBookTable WHERE address='Dombivali Mumbai' or stateCode='Maharashtra';
