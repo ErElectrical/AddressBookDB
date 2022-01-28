@@ -35,3 +35,9 @@ INSERT  AddressBookTable VALUES('Mohit ','Tanwar','Kotul Akole',422610,'Maharash
 UPDATE AddressBookTable SET Phonenum=97456638984 WHERE FirstName='Mohit';
 UPDATE AddressBookTable SET Lastname='Kumar' WHERE FirstName='Srujan';
 UPDATE AddressBookTable SET EmailId='kumar12@gmail.com' WHERE LastName='Zurunge';
+
+---------------UC5---------------
+-----Delete contact using their name------
+
+
+DELETE FROM AddressBookTable WHERE FirstName='Neha';
