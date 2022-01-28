@@ -50,3 +50,15 @@ DELETE FROM AddressBookTable WHERE FirstName='Neha';
 
 
 SELECT FirstName,phonenum FROM  AddressBookTable WHERE address='Dombivali Mumbai' or stateCode='Maharashtra';
+
+---------------UC7---------------
+-----Size of the Address book------
+
+--The AS command is used to rename a column or table with an alias.
+
+--An alias only exists for the duration of the query.
+
+-- here we alias the statecode based on country,statecode Now it will give us size based on same state and same country
+-- if employees belongs to same state and city than we can get that numbers of employee in our size column .
+ SELECT COUNT(stateCode) AS Size,country,stateCode FROM AddressBookTable GROUP BY stateCode,country;
+
