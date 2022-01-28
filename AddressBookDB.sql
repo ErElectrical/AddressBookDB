@@ -75,3 +75,26 @@ SELECT FirstName,phonenum FROM  AddressBookTable WHERE address='Dombivali Mumbai
 
  select * from AddressBookTable order by Lastname asc;
 
+ -----------------Uc9--------------------------------------------
+ ------Ability to Add type ---------------------------------------
+
+ -- with this column Type_name we can distributes contacts based on therir relation.
+ --weather it is family,friend,profession.
+ alter table AddressBookTable
+ add Type_name varchar(20);
+
+ update AddressBookTable
+ set Type_Name='friend'
+ where firstname='Mohit';
+
+ update AddressBookTable
+ set Type_Name='friend'
+ where firstname='Srujan';
+
+ update AddressBookTable
+ set Type_Name='family'
+ where firstname='Prajwal';
+
+
+ select * from AddressBookTable;
+
