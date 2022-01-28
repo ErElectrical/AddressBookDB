@@ -101,6 +101,53 @@ namespace AddressBookDB
 
         }
 
+        //Program to verify UC 
+
+        public void Verifyuccases(AddressBookDataModel model)
+        {
+           
+            try
+            {
+                using(this.connection)
+                {
+                    SqlCommand cmd = new SqlCommand("Ucsolver", this.connection);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@address", model.address);
+                    cmd.Parameters.AddWithValue("@statecode", model.state);
+                    cmd.Parameters.AddWithValue("@firstname", model.firstname);
+
+                    this.connection.Open();
+                    SqlDataReader data = cmd.ExecuteReader();
+                    if(data.HasRows)
+                    {
+                        Console.WriteLine("1. retrive data based on address and state"
+                                           + "\n 2. sort table alphabatically based on first name" +
+                                          "\n 3. count no. of contacts based on state ");
+                        while(data.Read())
+                        {
+                            Console.WriteLine(data);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("not found desired ");
+                    }
+                    data.Close();
+                    this.connection.Close();
+
+
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+        }
+
 
     }
 }
